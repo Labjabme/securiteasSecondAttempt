@@ -31,7 +31,8 @@ This project is a comprehensive automation suite for the SECURITEASE QE Tech Ass
    ```
    npm install
    ```
-   npx playwright install 
+   npx playwright install
+   ``` 
 
 ## Running the Tests
 To run the tests, use the following command:
