@@ -1,0 +1,23 @@
+{
+  "name": "securiteasassessment",
+  "version": "1.0.0",
+  "description": "SECURITEASE - QE TECH ASSESSMENT",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cucumber-js --config cucumber.json && node generate-report.js  "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^11.0.1",
+    "@playwright/test": "^1.47.2",
+    "@types/chai": "^4.3.19",
+    "@types/node": "^22.5.5",
+    "ajv": "^8.17.1",
+    "axios": "^1.7.7",
+    "chai": "^5.1.1",
+    "cucumber-html-reporter": "^6.0.0",
+    "ts-node": "^10.9.2"
+  }
+}

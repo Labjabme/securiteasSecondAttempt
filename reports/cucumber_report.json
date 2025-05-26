@@ -1,0 +1,442 @@
+[
+  {
+    "description": "  As a BBC editor\n  I want to report on the top 3 finishers of the 2023 Las Vegas Grand Prix\n  So that readers get a clear and accurate summary of the race results",
+    "elements": [
+      {
+        "description": "",
+        "id": "2023-las-vegas-grand-prix-results-reporting;verify-and-report-top-3-finishers-of-2023-las-vegas-grand-prix",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Verify and report top 3 finishers of 2023 Las Vegas Grand Prix",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 715710834
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I am on the BBC Sport homepage",
+            "match": {
+              "location": "src/test/steps/formulaOneSteps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1976809624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I navigate to the Formula 1 section",
+            "match": {
+              "location": "src/test/steps/formulaOneSteps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 101592916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I go to the Results page",
+            "match": {
+              "location": "src/test/steps/formulaOneSteps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 532409209
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I select the \"2023\" season",
+            "match": {
+              "location": "src/test/steps/formulaOneSteps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 325609250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I choose the \"Las Vegas Grand Prix\"",
+            "match": {
+              "location": "src/test/steps/formulaOneSteps.ts:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 570300083
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Position",
+                      "Driver",
+                      "Team"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "Max Verstappen",
+                      "Red Bull"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "George Russell",
+                      "Mercedes"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "Sergio Perez",
+                      "Red Bull"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the top 3 finishers should be:",
+            "match": {
+              "location": "src/test/steps/formulaOneSteps.ts:45"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5002541833,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (/Users/labjab/Downloads/securiteasAssessment-main/node_modules/@cucumber/cucumber/src/time.ts:52:14)\n    at listOnTimeout (node:internal/timers:573:17)\n    at processTimers (node:internal/timers:514:7)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 191315583
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "2023-las-vegas-grand-prix-results-reporting",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "2023 Las Vegas Grand Prix Results Reporting",
+    "tags": [],
+    "uri": "src/test/features/formula1.feature"
+  },
+  {
+    "description": "  In order to validate the REST Countries API,\n  We will test for schema validation, country count, and language validation.",
+    "elements": [
+      {
+        "description": "",
+        "id": "rest-countries-api-testing;schema-validation",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Schema Validation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 243434666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I have access to the REST Countries API",
+            "match": {
+              "location": "src/test/steps/restCountries.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 220959
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I send a GET request to \"/v3.1/all\"",
+            "match": {
+              "location": "src/test/steps/restCountries.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4501024292
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the response should conform to the published schema",
+            "match": {
+              "location": "src/test/steps/restCountries.steps.ts:18"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 4243958,
+              "error_message": "Error: no schema with key or ref \"http://json-schema.org/draft-06/schema#\"\n    at Ajv.validate (/Users/labjab/Downloads/securiteasAssessment-main/node_modules/ajv/lib/core.ts:362:21)\n    at Ajv.validateSchema (/Users/labjab/Downloads/securiteasAssessment-main/node_modules/ajv/lib/core.ts:519:24)\n    at Ajv._addSchema (/Users/labjab/Downloads/securiteasAssessment-main/node_modules/ajv/lib/core.ts:725:30)\n    at Ajv.compile (/Users/labjab/Downloads/securiteasAssessment-main/node_modules/ajv/lib/core.ts:388:22)\n    at CustomWorld.<anonymous> (/Users/labjab/Downloads/securiteasAssessment-main/src/test/steps/restCountries.steps.ts:20:24)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 198397791
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "rest-countries-api-testing;confirmation-of-countries",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Confirmation of Countries",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 225721625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I have access to the REST Countries API",
+            "match": {
+              "location": "src/test/steps/restCountries.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 224458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I send a GET request to \"/v3.1/all\"",
+            "match": {
+              "location": "src/test/steps/restCountries.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 585423584
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the response should contain 195 countries",
+            "match": {
+              "location": "src/test/steps/restCountries.steps.ts:26"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1492167,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m195\u001b[39m\nReceived: \u001b[31m250\u001b[39m\n    at Proxy.<anonymous> (/Users/labjab/Downloads/securiteasAssessment-main/node_modules/playwright/lib/matchers/expect.js:198:37)\n    at CustomWorld.<anonymous> (/Users/labjab/Downloads/securiteasAssessment-main/src/test/steps/restCountries.steps.ts:28:24)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 68096166
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "rest-countries-api-testing;validate-languages-in-south-africa",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Validate Languages in South Africa",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 236264624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I have access to the REST Countries API",
+            "match": {
+              "location": "src/test/steps/restCountries.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I send a GET request to \"/v3.1/alpha/ZAF\"",
+            "match": {
+              "location": "src/test/steps/restCountries.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 253874041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "the response should include \"South African Sign Language\" as an official language",
+            "match": {
+              "location": "src/test/steps/restCountries.steps.ts:32"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3615834,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"South African Sign Language\"\u001b[39m\nReceived array: \u001b[31m[\"Afrikaans\", \"English\", \"Southern Ndebele\", \"Northern Sotho\", \"Southern Sotho\", \"Swazi\", \"Tswana\", \"Tsonga\", \"Venda\", \"Xhosa\", …]\u001b[39m\n    at Proxy.<anonymous> (/Users/labjab/Downloads/securiteasAssessment-main/node_modules/playwright/lib/matchers/expect.js:198:37)\n    at CustomWorld.<anonymous> (/Users/labjab/Downloads/securiteasAssessment-main/src/test/steps/restCountries.steps.ts:39:46)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 81518166
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "rest-countries-api-testing",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "REST Countries API Testing",
+    "tags": [],
+    "uri": "src/test/features/restCountries.feature"
+  },
+  {
+    "description": "  As an editor\n  I want the search functionality to return at least 4 relevant results whenever someone searches for \"Sport in 2023\"\n  So that users have a wide range of articles, reports, and media to explore on the topic.",
+    "elements": [
+      {
+        "description": "",
+        "id": "search-results-retrieval;retrieve-search-results",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Retrieve Search Results",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 229248833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the search page",
+            "match": {
+              "location": "src/test/steps/searchResults.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1934726417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I search for \"Sport in 2023\"",
+            "match": {
+              "location": "src/test/steps/searchResults.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1048928250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should see at least 4 relevant results",
+            "match": {
+              "location": "src/test/steps/searchResults.ts:21"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 6333624,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m4\u001b[39m\nReceived:    \u001b[31m0\u001b[39m\n    at Proxy.<anonymous> (/Users/labjab/Downloads/securiteasAssessment-main/node_modules/playwright/lib/matchers/expect.js:198:37)\n    at CustomWorld.<anonymous> (/Users/labjab/Downloads/securiteasAssessment-main/src/test/steps/searchResults.ts:27:25)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 113296958
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "search-results-retrieval",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Search Results Retrieval",
+    "tags": [],
+    "uri": "src/test/features/searchFunctionality.feature"
+  }
+]

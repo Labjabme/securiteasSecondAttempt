@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "types": ["node", "@cucumber/cucumber", "@playwright/test"],
+    "resolveJsonModule": true,               // Add this line
+    "allowSyntheticDefaultImports": true     // Optional, but helps with default imports
+  },
+  "include": [
+    "src/test/features/*",
+    "src/test/steps/*",
+    "support/world.ts"
+  ]
+}
