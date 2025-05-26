@@ -28,13 +28,14 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: List files for debugging
+        run: ls -lR
+
       - name: Verify test report exists
-        # Ensure the test report is uploaded regardless of the success or failure of previous steps
         run: |
-          if [ ! -f reports/test-report.html ]; then
-            echo "Test report not found! Ensure your tests generate the report at 'reports/test-report.html'."
+          if [ ! -f reports/test-report.html ] && [ ! -f reports/cucumber-report.html ] && [ ! -f cucumber-report.html ]; then
+            echo "Test report not found! Ensure your tests generate the report at 'reports/test-report.html', 'reports/cucumber-report.html', or 'cucumber-report.html'."
             exit 1
-          fi
           fi
 
       - name: Upload test report
@@ -45,3 +46,4 @@ jobs:
           path: |
             reports/test-report.html
             reports/cucumber-report.html
+            cucumber-report.html
