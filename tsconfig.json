@@ -9,7 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
     "types": ["node", "@cucumber/cucumber", "@playwright/test"],
-    "resolveJsonModule": true,               // Add this line
+    "resolveJsonModule": true,               
     "allowSyntheticDefaultImports": true     // Optional, but helps with default imports
   },
   "include": [

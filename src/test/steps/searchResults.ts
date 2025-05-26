@@ -19,10 +19,10 @@ When('I search for {string}', { timeout: 10000 }, async function (searchTerm: st
 });
 
 Then('I should see at least {int} relevant results', async function (minResults: number) {
-    const resultElements = this.page.locator('.search-results .search-result');  // Select result elements
-    
-    // Check if there are at least the minimum number of results
-    const resultCount = await resultElements.count();
-    console.log(`Found ${resultCount} search results.`);
-    expect(resultCount).toBeGreaterThanOrEqual(minResults);  // Assert there are enough results
+    // Wait for at least one result to appear
+    await this.page.waitForSelector('[data-testid="default-promo"]', { timeout: 5000 });
+    // Select all result elements
+    const results = await this.page.$$('[data-testid="default-promo"]');
+    console.log('Results found:', results.length);
+    expect(results.length).toBeGreaterThanOrEqual(minResults);
 });
